@@ -3,21 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom LoL</title>
+    <title>Custom LoL & TFT</title>
     <link rel="stylesheet" href="custom.css">
 </head>
 <body>
+    <!-- Élément pour afficher les notifications -->
+    <div id="notification" class="notification"></div>
+
     <h1>Tirage au sort des équipes</h1>
+    
+    <!-- Boutons de sélection du mode de jeu -->
     <div class="mode-buttons">
         <div class="mode-button active" id="btn-draft">Custom Draft</div>
         <div class="mode-button" id="btn-tft">Custom TFT</div>
     </div>
 
+    <!-- Conteneur pour les champs des joueurs -->
     <div id="players"></div>
+    
+    <!-- Boutons d'action principaux -->
     <button id="generate-button">Lancer</button>
-    <div class="teams"></div>
-    <button id="reroll-button" style="display: none;">Relancer</button>
 
+    
+    <!-- Conteneur pour afficher les équipes générées -->
+    <div class="teams"></div>
+
+    <!-- Conteneur pour afficher les liens de draft (initialement caché) -->
+    <div id="draft-links" class="draft-links-container" style="display: none;">
+        <h2>Liens de Draft (draftlol.dawe.gg)</h2>
+        <div id="links-content">
+            <!-- Les liens générés apparaîtront ici -->
+        </div>
+        <button id="copy-links-button" style="display: none;">Copier les liens</button>
+    </div>
+
+    <!-- Scripts JavaScript -->
     <script src="draft.js"></script>
     <script src="tft.js"></script>
 </body>
